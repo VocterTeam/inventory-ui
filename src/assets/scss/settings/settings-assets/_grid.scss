@@ -1,0 +1,17 @@
+$grid: (
+	'top-menu-container': 1613px,
+	'full-hd': 1920px,
+    'navigation-menu': 200px,
+    'entity-add': 868px,
+    'entity-add-nav': 344px,
+);
+
+@function gridValue($width) {
+    @return map-get($grid, $width);
+}
+
+@function contentGrid($container, $content) {
+    $innerContainer: map-get($grid, $container);
+    $innerContent: map-get($grid, $content);
+    @return percentage($innerContent / $innerContainer);
+}

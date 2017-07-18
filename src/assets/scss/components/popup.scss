@@ -1,0 +1,52 @@
+@import '../settings/settings';
+/* base pop ups style ============== */
+
+.popup {
+    background-color: rgba(84, 110, 122, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 110;
+    &-inner {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 0 0;
+    }
+	&-body {
+		border-radius: 5px;
+	    display: block;
+	    width: 470px;
+		box-shadow: 10px 12px 24px rgba(54,69,77,.33); /* drop shadow */
+	    position: relative;
+	    &--delete {
+	    	width: 790px;
+	    	max-width: inherit;
+	    }
+	}
+	&-header {
+		padding: 35px;
+		background: #fff;
+		display: block;
+		border-radius: 5px 5px 0 0;
+	}
+	&-footer {
+		padding: 35px;
+		background: color('popup-footer');
+		display: block;
+		border-radius: 0 0 5px 5px;
+		&--small {
+			padding: 10px;
+		}
+	}
+}
+
+
+
+
+
+/* personal pop ups style ============== */

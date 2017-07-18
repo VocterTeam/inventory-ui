@@ -1,0 +1,147 @@
+@import '../settings/settings';
+
+.history-tooltip {
+	position: relative;
+	padding: 15px 25px;
+	background: #fff;
+	display: block;
+	min-width: 380px;
+	box-shadow: 0 3px 60px 4px #cfd7db;
+	z-index: 999;
+
+	&::before {
+		content:'';
+	    display:block;
+	    width:0;
+	    height:0;
+	    position:absolute;
+	    border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 15px solid #fff;
+	    left: 15%;
+	    top: -14px;
+	}
+
+	&.left-top {
+		&::before {
+			content:'';
+			display:block;
+		    width:0;
+		    height:0;
+		    position:absolute;
+		    border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 15px solid #fff;
+			right: 15%;
+		    bottom: -14px;
+		    transform: rotate(180deg);
+		}
+	}
+
+	&.left {
+		&::before {
+			content:'';
+		    display:block;
+		    width:0;
+		    height:0;
+		    position:absolute;
+		    border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 15px solid #fff;
+			left: initial;
+		    right: 15%;
+		    top: -14px;
+		}
+	}
+	&__inner {
+
+	}
+}
+
+.tooltip-list {
+	list-style: none;
+	margin-bottom: 0;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 5px 0;
+		position: relative;
+		&:first-child {
+			.tooltip-colors {
+				.tooltip-colors__line {
+					height: 50%;
+					bottom: 0;
+					top: inherit;
+				}
+			}
+		}
+		&:last-child {
+			.tooltip-colors {
+				.tooltip-colors__line {
+					height: 50%;
+					top: 0;
+				}
+			}
+		}
+	}
+}
+
+.tooltip-infolist {
+	&__date {
+		flex-basis: 50px;
+		text-align: center;
+		margin: 0 10px;
+		&>span {
+			display: block;
+			font: 14px 'ProximaNova-Regular';
+			text-transform: lowercase;
+			color: color('form-select-options-hover');
+		}
+	}
+	&__status {
+		flex-basis: 265px;
+		text-align: left;
+		margin: 0 10px;
+		&>span {
+			font-family: 'ProximaNova-Regular';
+			display: block;
+			margin-left: 0;
+			line-height: 20px;
+		}
+		&-name {
+			font-size: 16px;
+		}
+		&-reason {
+			font-size: 14px;
+			color: color('form-select-options-hover');
+		}
+
+		.free {
+			color: color('entity-free-status');
+		}
+
+		.used {
+			color: color('entity-used-status');
+		}
+		.underway {
+           	color: color('underway-statys');
+        }
+
+        .repair {
+           	color: color('primary');
+        }
+	}
+}
+
+.tooltip-colors {
+	display: block;
+	&__line {
+		position: absolute;
+        top: 0;
+        left: 4px;
+        width: 2px;
+        height: 100%;
+        display: block;
+	}
+}

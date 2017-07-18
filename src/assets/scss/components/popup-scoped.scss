@@ -1,0 +1,70 @@
+@import '../settings/settings';
+.confirm-success {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    &__icon {
+        margin: auto;
+    }
+}
+
+.backet-btn__sign {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.action-btn--transparent {
+    color: #fff;
+    background: transparent;
+}
+
+.action-btn__title {
+    vertical-align: middle;
+}
+
+.caution-title {
+    font: 23px/56px 'ProximaNova-Bold';
+    margin-bottom: 20px;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    &__blocks {
+        width: 50%;
+        float: left;
+        display: flex;
+        padding: 25px;
+        height: 190px;
+        align-items: center;
+        justify-content: center;
+        &--upload {
+            border: 1px dashed color('entity-counter-text');
+        }
+    }
+}
+
+.upload-title {
+    color: color('app-logo');
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-btn {
+    display: block;
+    &__sign {
+        display: block;
+        margin: 10px auto;
+    }
+    &__title {
+        font: 14px 'ProximaNova-Bold';
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

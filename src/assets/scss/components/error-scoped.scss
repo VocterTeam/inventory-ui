@@ -1,0 +1,44 @@
+@import '../settings/settings';
+.error {
+    background-color: #EDF1F3;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0px 0px 35px 10px rgba(44, 60, 68, 0.3);
+    height: 100%;
+    &-wrapper {
+        width: 700px;
+        padding: 40px 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #CDD9DD;
+        box-shadow: 16px 19px 45px rgba(54, 69, 77, 0.15);
+        h1 {
+            font: 40px/36px 'ProximaNova-Bold';
+            color: color('primary');
+            text-transform: uppercase;
+        }
+    }
+}
+
+.app-navlist__link {
+    display: inline-block;
+    font-family: 'ProximaNova-Bold';
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    text-decoration: underline;
+    color: #7cb342;
+    &:hover {
+        text-decoration: none;
+    }
+}

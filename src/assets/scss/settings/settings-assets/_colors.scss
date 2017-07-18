@@ -1,0 +1,32 @@
+$colors: (
+    'primary': #2c3c44,
+    'app-content': #EDF1F3,
+    'navlist-link': #35454d,
+    'nav-settings-icon': #546e7a,
+    'navlist-border': #6bc43f,
+    'action-btn-text': #fefefe,
+    'entity-title': #536d79,
+    'action-btn-success': #8bc349,
+    'action-btn-delete': #e8364f,
+    'entity-popup-btn': #8bc349,
+    'entity-list-delete-btn': #88A5B0,
+    'entity-list-delete-btn-hover': #263238,
+    'entity-counter-text': #90a4ae,
+    'entity-list-item': #CDD9DD,
+    'entity-active-item': #cfd7db,
+    'entity-spec-type': #90a4ae,
+    'app-logo': #7cb342,
+    'entity-add-nav': #7CB345,
+    'entity-free-status': #cddc39,
+    'entity-used-status': #bd4e3c,
+    'form-field': #eff3f5,
+    'form-field-text': #2c3b43,
+    'form-select-options-hover': #CFD8DC,
+    'required': #f55050,
+    'popup-footer': #89c049,
+    'underway-statys': #ff9000
+);
+
+@function color($color) {
+    @return map-get($colors, $color);
+}

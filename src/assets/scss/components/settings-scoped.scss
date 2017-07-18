@@ -1,0 +1,385 @@
+@import '../settings/settings';
+.settings-block {
+    display: block;
+}
+
+.settings-block {
+    margin-top: 25px;
+    &--top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @media screen and (max-width: 1560px) {
+            flex-direction: column;
+        }
+    }
+    &--center {
+        width: 100%;
+    }
+    &--status {
+        min-width: 500px;
+        margin-left: 30px;
+
+        @media screen and (max-width: 1560px) {
+            min-width: 100%;
+            margin-top: 25px;
+            margin-left: 0;
+        }
+    }
+    &__inner {
+        position: relative;
+        display: block;
+        border: 1px solid color('entity-list-item');
+        border-radius: 5px;
+        background-color: #fff;
+        &--currency {
+            display: block;
+            min-width: 900px;
+            flex-grow: 1;
+            @media screen and (max-width: 1780px) {
+                min-width: 700px;
+            }
+            @media screen and (max-width: 1560px) {
+                min-width: 100%;
+            }
+        }
+        /* &--lang {
+            min-width: 465px;
+            display: block;
+        } */
+    }
+}
+
+.settings-group {
+    &-holder {
+        display: block;
+        padding: 30px 40px;
+        border-bottom: 1px solid #f0f3f5;
+    }
+    &-title {
+        font: 23px/36px 'ProximaNova-Bold';
+        margin: 0;
+        color: color('primary');
+    }
+}
+
+.settings-list {
+    margin-bottom: 0;
+    padding: 0 0 0 40px;
+    list-style: none;
+    &-holder {
+        display: block;
+        padding: 20px 40px;
+        padding-left: 40px;
+        border-bottom: 1px solid #f0f3f5;
+    }
+    &-title {
+        font: 14px 'ProximaNova-Regular';
+        color: color('entity-counter-text');
+    }
+    &-wrapper {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        height: 400px;
+        margin: 20px 0;
+        &--def-leng {
+            padding: 30px 0;
+            border-bottom: 1px solid #f0f3f5;
+            .settings-list {
+                padding: 0 40px;
+            }
+            .settings-list__item {
+                &:nth-child(3) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        /*  &--lang {
+            margin: 20px 0;
+            height: 310px;
+            width: 97%;
+            .settings-list {
+                padding: 0 40px;
+            }
+        
+            .settings-list__item {
+                        &:nth-child(3) {
+                            margin-bottom: 0;
+                        }
+                    }
+        } */
+    }
+    &__item {
+        font: 16px 'ProximaNova-Regular';
+        padding: 5px 0;
+        color: color('nav-settings-icon');
+        &--note {
+            font: 14px 'ProximaNova-Regular';
+            color: color('entity-counter-text');
+        }
+        label {
+            display: flex;
+            font: 16px 'ProximaNova-Regular';
+            color: color('nav-settings-icon');
+            span {
+                margin: 0 10px 0 0;
+                @extend %inline-block-center;
+            }
+        }
+        input {
+            width: inherit;
+            font: 16px 'ProximaNova-Regular';
+            margin: 0;
+            text-transform: uppercase;
+            color: color('nav-settings-icon');
+        }
+        &:nth-child(3) {
+            margin-bottom: 30px;
+        }
+    }
+    &-general {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__all-currency {
+        width: 320px;
+        border-right: 1px solid #f0f3f5;
+        flex-grow: 1;
+        @media screen and (max-width: 1780px) {
+            width: 250px;
+        }
+    }
+    &__default-currency {
+        width: 320px;
+        border-right: 1px solid #f0f3f5;
+        flex-grow: 1;
+        @media screen and (max-width: 1780px) {
+             width: 250px;
+        }
+    }
+    &__exchange-rate {
+        width: 265px;
+        border-right: 1px solid #f0f3f5;
+        flex-grow: 1;
+        @media screen and (max-width: 1780px) {
+            width: 250px;
+        }
+    }
+}
+
+
+/* for indecators */
+
+.settings-indecators {
+    display: flex;
+    border-bottom: 1px solid #f0f3f5;
+    &__wrapper {
+        border-right: 1px solid #f0f3f5;
+        flex: 0 0 50%;
+        .settings-list {
+            padding: 20px 40px;
+        }
+        .settings-list__item {
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/* for colorpicker */
+
+.settings-colorpicker {
+    display: flex;
+    width: 100%;
+    padding: 30px 40px;
+    align-items: center;
+    &__status-name {
+        display: flex;
+        margin-left: 15px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__сolor-choice {
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.colorpicker-indicator {
+    display: flex;
+    width: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colorpicker-btn {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: color('app-logo');
+    border: 1px solid color('app-logo');
+    border-radius: 5px;
+    background: transparent;
+    @extend %default-transition;
+    &:hover {
+        color: #fff;
+        background: color('app-logo');
+    }
+}
+
+.open-settings__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vue-color__chrome {
+    position: absolute;
+    left: 40px;
+    bottom: -110px;
+    z-index: 99;
+}
+
+
+/* for categories and specification */
+
+.settings-category {
+    padding: 20px 40px;
+}
+
+.category-section {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    &__name {
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+        &-title {
+            font: 16px 'ProximaNova-Regular';
+            padding: 0 10px;
+            color: color('nav-settings-icon');
+            flex-basis: 500px;
+            @extend %ellipsis-points;
+        }
+    }
+    &__desk {
+        display: flex;
+        flex-direction: column;
+        width: 52%;
+    }
+    &__bnt {
+        flex-basis: 60px;
+    }
+}
+
+.edit-popup-btn,
+.delete-popup-btn {
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    margin-left: 10px;
+    color: color('nav-settings-icon');
+    background: transparent;
+    @extend %default-transition;
+    &:hover {
+        color: color('entity-list-delete-btn-hover');
+    }
+}
+
+.specification {
+    &-section {
+        width: 100%;
+    }
+    &-list {
+        width: 100%;
+        list-style: none;
+        &__item {
+            position: relative;
+            display: flex;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #fff;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__main {
+            display: flex;
+            flex: 1 0 auto;
+            align-items: center;
+        }
+    }
+}
+
+/* for checkbox */
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox'] {
+    margin-right: 10px;
+    & + label {
+        &::before {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            content: '';
+            margin-right: 10px;
+            vertical-align: middle;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-image: url(../../img/checkbox.png);
+            background-position: 0 -23px;
+        }
+    }
+    &:checked {
+        & + label {
+            &::before {
+                background-position: 0 0;
+            }
+        }
+    }
+}
+
+
+/* for radio */
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio'] {
+    & + label {
+        &::before {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            content: '';
+            cursor: pointer;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-image: url(../../img/radio.png);
+            background-position: 0 -23px;
+        }
+    }
+    &:checked {
+        & + label {
+            &::before {
+                background-position: 0 0;
+            }
+        }
+    }
+}

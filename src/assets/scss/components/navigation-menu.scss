@@ -1,0 +1,85 @@
+@import '../settings/settings';
+
+.navigation-menu {
+    position: relative;
+    min-width: contentGrid('full-hd', 'navigation-menu');
+    padding-top: 122px;
+    text-align: center;
+
+    @extend %shadow-element;
+}
+
+.user-nav {
+    position: relative;
+    &-settings {
+        margin-bottom: 42px;
+        text-align: center;
+    }
+    &-avatar {
+        position: relative;
+        display: inline-block;
+    }
+    &__img {
+        border-radius: 50%;
+    }
+    &-btn {
+        position: absolute;
+        right: -10px;
+        bottom: 0;
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 50%;
+        background: none;
+        background-color: #fff;
+        box-shadow: 0 0 10px #cfd7db;
+
+        @extend %inline-block-center;
+        @extend %default-transition;
+        &:focus {
+            @extend %shadow-element;
+        }
+    }
+}
+
+.user-settings-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: color('nav-settings-icon');
+
+    @extend %default-transition;
+}
+
+.app-navlist {
+    margin-bottom: 0;
+    &__item {
+        display: block;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        display: inline-block;
+        font-family: 'ProximaNova-Bold';
+        font-size: 14px;
+        font-weight: normal;
+        padding: 12px 12px;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: color('navlist-link');
+        border-bottom: 3px solid transparent;
+
+        @extend %default-transition;
+        &:hover,
+        &.router-link-exact-active {
+            border-color: color('navlist-border');
+        }
+        &:not(.router-link-exact-active):focus {
+            border-color: rgba(color('navlist-border'), 0.4);
+        }
+    }
+}

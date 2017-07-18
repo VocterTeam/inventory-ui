@@ -1,0 +1,11 @@
+@mixin font-face($font, $type) {
+    @font-face {
+        font-family: '#{$font}-#{$type}';
+
+        src: url('../fonts/#{$font}/#{$font}-#{$type}/#{$font}-#{$type}.eot');
+        src: url('../fonts/#{$font}/#{$font}-#{$type}/#{$font}-#{$type}.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/#{$font}/#{$font}-#{$type}/#{$font}-#{$type}.woff') format('woff'),
+        url('../fonts/#{$font}/#{$font}-#{$type}/#{$font}-#{$type}.ttf') format('truetype'),
+        url('../fonts/#{$font}/#{$font}-#{$type}/#{$font}-#{$type}.svg##{$font}') format('svg');
+    }
+}

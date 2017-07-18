@@ -1,0 +1,31 @@
+@import '../settings/settings';
+
+.app-date {
+    &__title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+.app-currentdate {
+    &__date,
+    &__time {
+        position: relative;
+
+        @extend %inline-block-center;
+    }
+    &__date {
+        margin-right: 10px;
+    }
+    &__time {
+        width: 90px;
+        .fa-icon {
+            display: inline-block;
+            vertical-align: middle;
+            color: color('app-logo');
+        }
+    }
+    &__timeval {
+        @extend %inline-block-center;
+    }
+}
